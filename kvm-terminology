@@ -1,0 +1,29 @@
+KVM hypervisor (Kernel-based Virtual Machine) is the virtualization layer available for Linux.
+
+In KVM, the Linux kernel acts as a Type 2 Hypervisor, (A hypervisor is a program that allows multiple operating systems to share a single hardware host.) streamlining management and improving performance in virtualized environments. The hypervisor creates VM environments and coordinates calls for processor, memory, hard disk, network, and other resources through the host OS.
+
+(KVM)Virtualization terminology
+
+VT(Virtualization Technology) enabled: If a hardware supports virtualization directly without any third-party software to simulate then that hardware is called as VT enabled processor. This is denoted by VTx in Intel processors and AMD-v For AMD processors. So if you want to install KVM on your machine your processor should support one of them.
+
+Guest OS: Guest OS is the OS you are going to install on a Virtual machine which guest to the Host/base OS. You can install number of guest Operating systems on a host machine.
+
+HOST OS: This is the OS where you are going to install your hypervisor software like KVM and virtual manager etc. This base OS so that you hypervisor start running as KVM is not an OS it should run on a OS to get things done.
+
+Hyperviser: Hyperviser is a software which will help us in implementing virtualization. KVM, Vmware ESX and Xen are some examples of Hypervisors.
+
+Virtual machine: Virtual machine is a virtual hardware allocated by Hypervisor for installing Guest OS on it so that it can run as separate machine.
+
+libvirt: A toolkit to interact with the virtualization capabilities of recent versions of Linux (and other OSes). This is a building block to KVM.
+
+virsh(Virtualization Shell): Virsh is a shell for managing hypervisors and VM’s directly from Host OS terminal. We cover this virsh extensively in our coming posts.
+
+Cloning: Cloning is a concept to replicate a VM state/data etc so that we no need to install a new OS. After cloning we can use the cloned machine as we use normal VM.
+
+p2v: This type of converting a machine from one state to other. In this we can convert a physical machine to virtual machine to consolidate a hardware machine.
+
+v2v: This is the concept of migrating virtual machine to other virtual machine at the time of maintenance etc.
+
+Hyper-threading(HT): This is Intel’s proprietary simultaneous multithreading (SMT) implementation used to improve parallelization of computations (doing multiple tasks at once) performed on PC microprocessors.
+
+Overcommit: This is concept of committing resource more than available at HOST OS resources such as RAM, CPU and harddisk. We should be very much cautious when dealing with over commit.
